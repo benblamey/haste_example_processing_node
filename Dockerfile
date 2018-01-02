@@ -16,7 +16,7 @@ EXPOSE 80
 
 
 
-# Add the example sript (change this to your own:)
-ADD . /app
+# Add the example srcipt (change this to your own:)
+ADD haste_processing_node /app/haste_processing_node
 
-CMD ["python", "function.py"]
+CMD ["python", "-m", "haste_processing_node.function"]

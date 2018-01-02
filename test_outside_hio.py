@@ -1,4 +1,4 @@
-from function import process_data
+from haste_processing_node.function import process_data
 import pickle
 import time
 

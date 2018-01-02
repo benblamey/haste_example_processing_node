@@ -1,8 +1,8 @@
 from harmonicPE.daemon import listen_for_tasks
-from haste_storage_client_cache import get_storage_client
 
-from image_analysis import extract_image_features
-from simulator_messages import split_data_from_simulator
+from .haste_storage_client_cache import get_storage_client
+from .image_analysis.image_analysis import extract_image_features
+from .simulator_messages import split_data_from_simulator
 
 
 # TODO: This will break on MACOSX (see HIO code for fix)
