@@ -5,10 +5,10 @@ FROM python:3.6.3
 WORKDIR /app
 
 # Checkout and install Harmonic PE:
-RUN git clone https://github.com/benblamey/HarmonicPE.git;cd /app/HarmonicPE;git checkout master;pip install .
+RUN git clone https://github.com/benblamey/HarmonicPE.git;cd /app/HarmonicPE;git checkout master;pip3 install -e .
 
 # Checkout and install the Haste Storage Client:
-RUN git clone https://github.com/benblamey/HasteStorageClient.git;cd /app/HasteStorageClient;git checkout v0.4;pip install .
+RUN git clone https://github.com/benblamey/HasteStorageClient.git;cd /app/HasteStorageClient;git checkout v0.4;pip3 install -e .
 
 
 # Make port 80 available (required for the listening daemon)
