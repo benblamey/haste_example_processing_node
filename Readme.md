@@ -1,17 +1,9 @@
-# HIOcontainer
+Example processing node for [HASTE](http://haste.research.it.uu.se) for use with the [HarmonicIO processing framework](https://github.com/benblamey/HarmonicIO)
 
-## Building
 
-Building containers for Harmonic IO. Build the container from the HIOContainer folder with: 
-
+### Build and Publish for use in HIO:
 ```
-docker build -t "haste-example" .
-```
-
-## Running
-
-Run the container with (e.g on MacOS):
-
-```
-docker run "haste-example"
+docker build -t "haste-example" . 
+docker tag haste-example benblamey/haste-example:latest 
+docker push benblamey/haste-example
 ```
