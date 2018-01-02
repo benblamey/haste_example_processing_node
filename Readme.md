@@ -1,9 +1,15 @@
 Example processing node for [HASTE](http://haste.research.it.uu.se) for use with the [HarmonicIO processing framework](https://github.com/benblamey/HarmonicIO)
 
+**Only works inside a HarmonicIO container (see: https://github.com/benblamey/HarmonicPE)**
 
-### Build and Publish for use in HIO:
+## Features
+* Caching of storage clients for the HASTE Storage Platform.
+* Auto-configuration of HASTE storage client.
+
+
+## Build and Publish for use in HIO:
 ```
-docker build -t "haste-example" . 
+docker build -t "haste-example" .
 docker tag haste-example benblamey/haste-example:latest 
 docker push benblamey/haste-example
 ```
