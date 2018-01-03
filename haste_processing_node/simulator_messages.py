@@ -6,6 +6,12 @@ def split_data_from_simulator(message_bytes):
 
     metadata = pickle.loads(message_bytes)  # Note: Bytes past the pickled object’s representation are ignored.
 
+    # metadata = {'stream_id': stream_id,
+    #             'timestamp': time.time(),
+    #             'location': (12.34, 56.78),
+    #             'image_length_bytes': 1000 }
+    # See: https://github.com/benblamey/exjobb/blob/master/simulator_no_flask.py#L92
+
     image_length_bytes = metadata['image_length_bytes']
     image_bytes = message_bytes[-image_length_bytes:]
 

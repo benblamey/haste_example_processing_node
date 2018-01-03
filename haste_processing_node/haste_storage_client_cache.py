@@ -40,7 +40,11 @@ def get_storage_client(stream_id):
         haste_storage_client_config = __get_haste_storage_client_config()
 
         client = HasteStorageClient(stream_id,
-                                    config=haste_storage_client_config)
+                                    config=haste_storage_client_config,
+                                    # TODO: while OS is down - discard all data:
+                                    default_storage=None)
+
+        print('While OS is down - CONFIGURED TO DISCARD ALL DATA!', flush=True)
 
         haste_storage_clients[stream_id] = client
 

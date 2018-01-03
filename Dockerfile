@@ -19,4 +19,6 @@ EXPOSE 80
 # Add the example srcipt (change this to your own:)
 ADD haste_processing_node /app/haste_processing_node
 
+# TODO: use setup.py for dependencies.
+
 CMD ["python", "-m", "haste_processing_node.function"]
