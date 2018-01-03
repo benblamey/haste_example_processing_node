@@ -22,7 +22,6 @@ def process_data(message_bytes):
 
     # Get a storage client for the cache, and use it to save the blob and all metadata:
     stream_id = metadata['stream_id']  # Identifies the data in storage - across all processing nodes.
-    stream_id = 'delete_me_bla'  # Identifies the data in storage - across all processing nodes.
     haste_storage_client = get_storage_client(stream_id)
     timestamp_cloud_edge = metadata['timestamp']
     haste_storage_client.save(timestamp_cloud_edge,
